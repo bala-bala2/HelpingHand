@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Kavya | Support Fund</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="ph-fill ph-heart" style="color: #3b82f6;"></i>
+                Help Kavya
+            </div>
+            <button class="btn btn-primary" onclick="scrollToDonate()">Donate Now</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container page-content">
+        
+        <!-- Hero Card -->
+        <section class="card hero-card">
+            <div class="hero-image">
+                <!-- Placeholder Image -->
+                <img src="/kavya.jpeg" alt="Kavya Sharma">
+            </div>
+            <div class="hero-content">
+                <span class="badge">Victim</span>
+                <h1>Help Kavya Sharma</h1>
+                <p>I'm Kavya, thanks for showing interest in helping me. I am currently facing a very difficult situation as my bank account was frozen due to a serious online banking scam. I am in urgent need of ₹2,000. Please help me guys! Even a contribution of Rs. 1 will be highly appreciated. Thank you for your support and generosity—these funds will come to my friend's account, so don't be confused.</p>
+            </div>
+        </section>
+
+        <!-- Progress Card -->
+        <section class="card progress-card">
+            <div class="progress-stats">
+                <div class="stat">
+                    <span class="stat-label">RAISED</span>
+                    <span class="stat-value">₹15</span>
+                </div>
+                <div class="stat text-right">
+                    <span class="stat-label">GOAL</span>
+                    <span class="stat-value">₹2,000</span>
+                </div>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <p class="progress-text">1% funded. Thank you!</p>
+        </section>
+
+        <!-- Donation Section -->
+        <section class="card donation-section" id="donateSection">
+            <div class="donation-header">
+                <h2>Make a Donation</h2>
+                <p>Scan this QR code with any UPI app to donate.</p>
+            </div>
+
+            <div class="qr-showcase">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="qr-wrapper">
+                        <!-- QR Image Generator -->
+                        <img src="QR.jpeg" alt="Payment QR Code">
+                        <div class="scanner-laser"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upi-details">
+                <span class="upi-label">UPI ID :</span>
+                <div class="upi-copy-box">
+                    <span id="upiIdText" class="upi-text">akki.ray2006@oksbi</span>
+                    <button class="btn-copy" id="copyBtn" onclick="copyUPI()">
+                        <i class="ph ph-copy"></i>
+                        <span>Copy</span>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="btn btn-large btn-primary donate-btn-mobile" onclick="scrollToDonate()">
+                Donate Now <i class="ph-bold ph-arrow-right"></i>
+            </button>
+        </section>
+
+        <!-- How To Donate -->
+        <section class="how-to-section">
+            <h3>How to Donate?</h3>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon-wrapper">
+                        <i class="ph-fill ph-device-mobile"></i>
+                    </div>
+                    <div class="step-info">
+                        <h4>Open Any UPI App</h4>
+                        <p>Google Pay, PhonePe, Paytm, BHIM, Amazon Pay etc.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon-wrapper">
+                        <i class="ph-fill ph-qr-code"></i>
+                    </div>
+                    <div class="step-info">
+                        <h4>Scan QR Code</h4>
+                        <p>Tap on the scanner icon and scan the given QR code.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon-wrapper">
+                        <i class="ph-fill ph-currency-inr"></i>
+                    </div>
+                    <div class="step-info">
+                        <h4>Enter Amount</h4>
+                        <p>Enter your desired donation amount and proceed to pay.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon-wrapper">
+                        <i class="ph-fill ph-check-circle"></i>
+                    </div>
+                    <div class="step-info">
+                        <h4>Confirm Payment</h4>
+                        <p>Enter your UPI PIN to complete the transaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <i class="ph-fill ph-heart footer-icon"></i>
+            <h4>Thank You</h4>
+            <p class="footer-note">* Your kindness and generosity mean everything to us during this difficult time. After contribution please send screen shot of your payment to +91 9252912705 *</p>
+            <p class="copyright">&copy; 2026 Help Kavya.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="ph-fill ph-check-circle"></i>
+        <span>UPI ID copied to clipboard!</span>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
